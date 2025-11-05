@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Encuesta de Satisfacción</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f0f4f8;
+      margin: 40px;
+    }
+    h1 {
+      color: #2c3e50;
+      text-align: center;
+    }
+    form {
+      background-color: #ffffff;
+      padding: 20px;
+      border-radius: 10px;
+      max-width: 600px;
+      margin: auto;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    fieldset {
+      border: none;
+      margin-top: 15px;
+    }
+    legend {
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    button[type="submit"] {
+      background-color: #3498db;
+      color: white;
+    }
+    button[type="reset"] {
+      background-color: #e74c3c;
+      color: white;
+      margin-left: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Encuesta de Satisfacción</h1>
+  <form>
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" name="nombre" placeholder="Tu nombre">
+
+    <label for="apellidos">Apellidos:</label>
+    <input type="text" id="apellidos" name="apellidos" placeholder="Tus apellidos">
+
+    <fieldset>
+      <legend>Valoración del servicio</legend>
+      <label><input type="radio" name="valoracion" value="1"> Muy malo</label>
+      <label><input type="radio" name="valoracion" value="2"> Malo</label>
+      <label><input type="radio" name="valoracion" value="3"> Regular</label>
+      <label><input type="radio" name="valoracion" value="4"> Bueno</label>
+      <label><input type="radio" name="valoracion" value="5"> Excelente</label>
+    </fieldset>
+
+    <label for="frecuencia">¿Con qué frecuencia usas el servicio?</label>
+    <select id="frecuencia" name="frecuencia">
+      <option value="diario">Diario</option>
+      <option value="semanal">Semanal</option>
+      <option value="mensual">Mensual</option>
+      <option value="ocasional">Ocasional</option>
+    </select>
+
+    <label for="comentarios">Comentarios:</label>
+    <textarea id="comentarios" name="comentarios" rows="4" placeholder="Escribe tus comentarios aquí..."></textarea>
+
+    <label for="fecha">Fecha de la encuesta:</label>
+    <input type="date" id="fecha" name="fecha">
+
+    <button type="submit">Enviar</button>
+    <button type="reset">Reiniciar</button>
+  </form>
+</body>
+</html>

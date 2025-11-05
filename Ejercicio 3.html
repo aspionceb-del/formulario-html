@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Registro de Usuario</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #eef2f3;
+      margin: 40px;
+    }
+    h1 {
+      color: #2c3e50;
+      text-align: center;
+    }
+    form {
+      background-color: #ffffff;
+      padding: 25px;
+      border-radius: 10px;
+      max-width: 700px;
+      margin: auto;
+      box-shadow: 0 0 12px rgba(0,0,0,0.1);
+    }
+    fieldset {
+      border: none;
+      margin-bottom: 20px;
+    }
+    legend {
+      font-weight: bold;
+      font-size: 1.1em;
+      margin-bottom: 10px;
+      color: #2980b9;
+    }
+    label {
+      display: block;
+      margin-top: 12px;
+      font-weight: bold;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    input[type="radio"],
+    input[type="checkbox"] {
+      width: auto;
+      margin-right: 8px;
+    }
+    .radio-group label,
+    .checkbox-group label {
+      display: inline-block;
+      margin-right: 15px;
+    }
+    textarea {
+      resize: vertical;
+    }
+    button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    button[type="submit"] {
+      background-color: #27ae60;
+      color: white;
+    }
+    button[type="reset"] {
+      background-color: #c0392b;
+      color: white;
+      margin-left: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Formulario de Registro</h1>
+  <form>
+    <fieldset>
+      <legend>Datos personales</legend>
+
+      <label for="nombre">Nombre completo:</label>
+      <input type="text" id="nombre" name="nombre" required minlength="3" maxlength="40">
+
+      <label for="email">Correo electrónico:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="edad">Edad:</label>
+      <input type="number" id="edad" name="edad" min="18" max="100" required>
+
+      <label for="pais">País de residencia:</label>
+      <select id="pais" name="pais" required>
+        <option value="">-- Selecciona tu país --</option>
+        <option value="es">España</option>
+        <option value="mx">México</option>
+        <option value="ar">Argentina</option>
+        <option value="co">Colombia</option>
+        <option value="otro">Otro</option>
+      </select>
+    </fieldset>
+
+    <fieldset>
+      <legend>Seguridad</legend>
+
+      <label for="password">Contraseña:</label>
+      <input type="password" id="password" name="password" required minlength="8">
+
+      <label for="confirmar">Confirmar contraseña:</label>
+      <input type="password" id="confirmar" name="confirmar" required>
+    </fieldset>
+
+    <fieldset>
+      <legend>Información adicional</legend>
+
+      <label>Género:</label>
+      <div class="radio-group">
+        <label><input type="radio" name="genero" value="masculino" required> Masculino</label>
+        <label><input type="radio" name="genero" value="femenino"> Femenino</label>
+        <label><input type="radio" name="genero" value="otro"> Otro</label>
+      </div>
+
+      <label>Intereses:</label>
+      <div class="checkbox-group">
+        <label><input type="checkbox" name="intereses" value="tecnologia"> Tecnología</label>
+        <label><input type="checkbox" name="intereses" value="arte"> Arte</label>
+        <label><input type="checkbox" name="intereses" value="deporte"> Deporte</label>
+        <label><input type="checkbox" name="intereses" value="musica"> Música</label>
+      </div>
+
+      <label for="bio">Biografía breve:</label>
+      <textarea id="bio" name="bio" rows="4" placeholder="Cuéntanos algo sobre ti..."></textarea>
+
+      <label><input type="checkbox" id="terminos" name="terminos" required> Acepto los términos y condiciones</label>
+    </fieldset>
+
+    <button type="submit">Enviar</button>
+    <button type="reset">Restablecer</button>
+  </form>
+</body>
+</html>
